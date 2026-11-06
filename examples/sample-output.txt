@@ -1,0 +1,12 @@
+--- matching versions ---
+examples/matching/pyproject.toml: 1.2.3 (line 3)
+examples/matching/VERSION: 1.2.3 (line 1)
+PASS   versions match: 1.2.3
+--- mismatched versions ---
+examples/mismatched/package.json: 1.3.0 (line 3)
+examples/mismatched/VERSION: v1.2.3 (line 1)
+FAIL   versions differ: 1.3.0 and v1.2.3
+--- bad version format ---
+examples/bad-format/pyproject.toml: 1.2.3 (line 3)
+examples/bad-format/VERSION: 1.2 (line 1)
+FAIL   second version: does not follow MAJOR.MINOR.PATCH
